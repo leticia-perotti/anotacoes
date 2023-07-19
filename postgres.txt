@@ -1,0 +1,15 @@
+-> Anotações sobre estoure de exeções e tratativa de erros em banco de dados
+  - ASSERTION 'condição do erro' , 'mensagam do erro';
+    - Serve para estourar uma raise exception em apenas uma linha já tendo a condição de erro
+
+  - EXCEPTION
+    - É um bloco como o BEGIN e END, está entre eles e quando ela á estourada, deve ter CASE WHEN para tratar cada tipo de erro (o número do erro aparece quando ela estoura sem tratar)
+
+  - Transações
+    - Uma trigger sempre pertence a mesma transação de quem a acionou, então quando estourada, todo a transação, desdo o INSERT/UPDATE é cancelada;
+
+  - RETURN NULL
+    - Apenas para sair da transação
+
+  - vVariavel := valor
+    - Posso utilizar o símbolo de ":=" para atribuir valor a uma variável
