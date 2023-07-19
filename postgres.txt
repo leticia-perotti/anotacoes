@@ -36,3 +36,13 @@
 
   - CLOSE
     - Depois de tudo devemos fechar um cursor
+
+  - FOUND
+    - Para sair de um laço com um cursor posso utilizar o IF NOT FOUND
+
+  -DO
+    - Comando DO $$
+          BEGIN .. END -> aqui vai o comando em PLPGSQL em si
+      $$
+    - É utilizado quando precisamos criar um bloco de comando em pgsql sem ter a necessidade de criar uma função
+
