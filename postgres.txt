@@ -14,3 +14,25 @@
 
   - vVariavel := valor
     - Posso utilizar o símbolo de ":=" para atribuir valor a uma variável
+
+  - FOUND
+    - Posso utilizar a query IF NOT FOUND como uma condição para saber se a última query realmente foi executada e se teve algum retorno.
+
+  - GET DIAGNOSTICS vVariavel = ROW_COUNT
+    - Pega a quantidade de linhas inseridas/alterada pelo último registro e é tratavel para verificar se está certo;
+
+  - Cursores
+    - DECLARE v_cursor refcursor
+    - Lá no begin:
+        OPEN v_cursor FOR select * from instrutor;
+    - OPEN v_cursor (SCROLL, NO SCROLL) -> permite ou não se posso mover para frente ou regredir nos itens do cursor
+
+  - FETCH
+    - Para pegar valores de dentro de um cursor (que seria como uma lista), tem q usar o comando fecth para percorrer um ponteiro dentro desta lista;
+    - FETCH (last, next, first...) nome_cursor INTO nome_variavel
+
+  - MOVE
+    - Mesma função do fetch só que sem atribuir a uma variável, é menos utilizado
+
+  - CLOSE
+    - Depois de tudo devemos fechar um cursor
