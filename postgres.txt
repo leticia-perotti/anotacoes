@@ -4,6 +4,7 @@
 
   - EXCEPTION
     - É um bloco como o BEGIN e END, está entre eles e quando ela á estourada, deve ter CASE WHEN para tratar cada tipo de erro (o número do erro aparece quando ela estoura sem tratar)
+    - CASE WHEN OTHERS -> garante que todas as outras exeções que não foram tratadas serão executadas.
 
   - Transações
     - Uma trigger sempre pertence a mesma transação de quem a acionou, então quando estourada, todo a transação, desdo o INSERT/UPDATE é cancelada;
